@@ -13,7 +13,8 @@ function App() {
 
   const copyPassToClipboard = useCallback(() =>{
     passwordRef.current?.select()
-    passwordRef.current?.setSelectionRange(0,12)
+    // copy upto 20 digits
+    passwordRef.current?.setSelectionRange(0,20)
     setColor("bg-green-700")
     setBtntxt("copied")
     window.navigator.clipboard.writeText(password)
